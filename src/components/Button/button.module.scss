@@ -8,36 +8,30 @@
 	cursor: pointer;
 	border-radius: 10px;
 	font-size: 18px;
+	color: $neutral;
 }
 
 .primary {
-	color: $cream;
-	background-color: $orange-2;
+	background-color: $primary;
 	transition: background-color 0.2s ease-out;
 
 	&:hover {
-		background-color: darken($orange-2, 5);
+		background-color: darken($primary, 5);
 	}
 }
 
 .secondary {
 	color: $cream;
-	background-color: $cyan-1;
+	background-color: $secondary;
 	transition: background-color 0.2s ease-out;
 
 	&:hover {
-		background-color: darken($cyan-1, 5);
+		background-color: darken($secondary, 5);
 	}
 }
 
 .link {
-	border-bottom: 1px solid black;
-	padding-bottom: 1px;
+	color: $neutral;
 	font-size: 18px;
 	transition: color 0.3s ease-out, border 0.3s ease-out;
-
-	&:hover {
-		color: $orange-2;
-		border-bottom: 1px solid $cyan-2;
-	}
 }
