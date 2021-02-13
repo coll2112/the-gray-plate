@@ -1,0 +1,43 @@
+@use '../../styles/variables.scss' as *;
+
+.primary,
+.secondary {
+	border: none;
+	width: 100%;
+	min-height: 45px;
+	cursor: pointer;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+.primary {
+	color: $cream;
+	background-color: $orange-2;
+	transition: background-color 0.2s ease-out;
+
+	&:hover {
+		background-color: darken($orange-2, 5);
+	}
+}
+
+.secondary {
+	color: $cream;
+	background-color: $cyan-1;
+	transition: background-color 0.2s ease-out;
+
+	&:hover {
+		background-color: darken($cyan-1, 5);
+	}
+}
+
+.link {
+	border-bottom: 1px solid black;
+	padding-bottom: 1px;
+	font-size: 18px;
+	transition: color 0.3s ease-out, border 0.3s ease-out;
+
+	&:hover {
+		color: $orange-2;
+		border-bottom: 1px solid $cyan-2;
+	}
+}
