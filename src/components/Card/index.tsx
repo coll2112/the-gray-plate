@@ -5,8 +5,8 @@ import Button from '~/components/Button'
 import styles from './card.module.scss'
 
 interface Props {
-	img?: string
 	title: string
+	img?: string
 	text?: string
 	projectLink?: string
 	repoLink?: string
