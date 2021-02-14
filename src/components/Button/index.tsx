@@ -3,7 +3,7 @@ import Link from 'next/Link'
 import styles from './button.module.scss'
 
 interface Props {
-	text: string
+	children: string
 	href: string
 	type: 'primary' | 'secondary' | 'link'
 	className?: string
@@ -11,10 +11,10 @@ interface Props {
 }
 
 const Button: FunctionComponent<Props> = ({
-	text,
 	href,
 	type,
 	className,
+	children,
 	...rest
 }) => {
 	const btnType = {
@@ -25,7 +25,11 @@ const Button: FunctionComponent<Props> = ({
 
 	return (
 		<Link href={href}>
-			{createElement(btnType[type], { className: styles[type], ...rest }, text)}
+			{createElement(
+				btnType[type],
+				{ className: styles[type], ...rest },
+				children
+			)}
 		</Link>
 	)
 }

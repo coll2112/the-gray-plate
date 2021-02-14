@@ -19,9 +19,9 @@ export default function About() {
 					minHeight: '200px',
 				}}
 			>
-				<Button type='primary' href='/' text={path} />
-				<Button type='secondary' href='/' text={path} />
-				<Button type='link' href='/' text='Back to Home Page' />
+				<Button type='link' href='/'>
+					Back to Home Page
+				</Button>
 			</div>
 		</div>
 	)
