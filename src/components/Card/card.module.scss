@@ -1,1 +1,39 @@
-@use '../../styles/variables.scss';
+@use '../../styles/variables.scss' as *;
+
+.card {
+	width: 400px;
+	background-color: $primary;
+	min-height: 350px;
+	border-radius: 10px;
+}
+
+.img {
+	position: relative;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;
+}
+
+.body {
+	padding: 15px;
+}
+
+.title {
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.text {
+	font-weight: 200;
+	font-size: 16px;
+	margin: 5px 0 25px;
+}
+
+.projectLink {
+	margin-bottom: 15px;
+}

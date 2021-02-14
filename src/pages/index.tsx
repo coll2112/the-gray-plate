@@ -2,6 +2,14 @@ import Hero from '~/components/Hero'
 import Card from '~/components/Card'
 
 export default function Home() {
+	let cardArr = [0, 1, 2].map((i) => (
+		<Card
+			key={i}
+			img='https://raw.githubusercontent.com/coll2112/personal_project/master/landing.png'
+			title='Project 1'
+			text='Insert some text about project here...'
+		/>
+	))
 	return (
 		<div>
 			<Hero
@@ -10,7 +18,17 @@ export default function Home() {
 				href='/about'
 				btnText='View My Projects'
 			/>
-			<Card title='Project 1' text='Insert some text about project here...' />
+			<div
+				style={{
+					display: 'flex',
+					justifyContent: 'space-around',
+					flexWrap: 'wrap',
+					marginTop: '60px',
+					marginBottom: '60px',
+				}}
+			>
+				{cardArr}
+			</div>
 		</div>
 	)
 }
