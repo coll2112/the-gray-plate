@@ -6,9 +6,5 @@ module.exports = {
 		'\\.(scss|sass|css)$': 'identity-obj-proxy',
 	},
 	collectCoverage: true,
-	collectCoverageFrom: [
-		'**/*.{tss,tsx}',
-		'!**/node_modules/**',
-		'!**/vendor/**',
-	],
+	collectCoverageFrom: ['**/*.{tss,tsx}', '!**/node_modules/**'],
 }
