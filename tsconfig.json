@@ -23,6 +23,14 @@
 		"allowJs": true,
 		"module": "esnext"
 	},
-	"include": ["next-env.d.ts", "src", "**/*.ts", "**/*.tsx"],
+	"include": [
+		"next-env.d.ts",
+		"src",
+		"**/*.ts",
+		"**/*.tsx",
+		"setupTests.s",
+		"jest.setup.js",
+		"jest.config.js"
+	],
 	"exclude": ["node_modules"]
 }
