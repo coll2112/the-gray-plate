@@ -7,5 +7,5 @@ module.exports = {
 		'~/(.*)': '<rootDir>/src/$1',
 	},
 	collectCoverage: true,
-	collectCoverageFrom: ['**/*.{tss,tsx}', '!**/node_modules/**'],
+	collectCoverageFrom: ['**/*.{tss,tsx}', '!**/node_modules/**', '!**/pages/**'],
 }
