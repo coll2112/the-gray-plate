@@ -1,4 +1,5 @@
 import React, { FunctionComponent, createElement } from 'react'
+import clsx from 'clsx'
 import Link from 'next/Link'
 import styles from './button.module.scss'
 
@@ -27,7 +28,7 @@ const Button: FunctionComponent<Props> = ({
 		<Link href={href}>
 			{createElement(
 				btnType[type],
-				{ className: styles[type], ...rest },
+				{ className: clsx(styles[type], className), ...rest },
 				children
 			)}
 		</Link>
