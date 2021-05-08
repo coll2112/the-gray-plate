@@ -12,12 +12,13 @@ const Header: FunctionComponent = () => {
 
   return (
     <div className={styles.container}>
-      <h3 className={styles.title}>Lee Collins</h3>
+      <h3 className={styles.title}>Web Development</h3>
       <div className={styles.links}>
         {links.map(({ href, name }) => (
           <Link href={href}>
             <a className={styles.link}>
               <span className={styles.btnSides} />
+              {/* TODO: Fix the buttons jumpiness */}
               <p className={styles['link-text']}>{name}</p>
             </a>
           </Link>
