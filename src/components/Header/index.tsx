@@ -15,7 +15,7 @@ const Header: FunctionComponent = () => {
       <h3 className={styles.title}>Web Development</h3>
       <div className={styles.links}>
         {links.map(({ href, name }) => (
-          <Link href={href}>
+          <Link key={name} href={href}>
             <a className={styles.link}>
               <span className={styles.btnSides} />
               {/* TODO: Fix the buttons jumpiness */}
