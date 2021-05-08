@@ -13,8 +13,8 @@ $highlight: #bb7d4a;
 $accent: #8a8a8f;
 
 // Variables
-$transWidth: width 0.3s ease-in-out;
-$transHeight: height 0.3s ease-in-out;
+$transWidth: width 0.2s ease-in-out;
+$transHeight: height 0.2s ease-in-out 0.2s;
 
 // Fonts
 $roboto: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
@@ -29,6 +29,8 @@ $rockSalt: 'Rock Salt', cursive;
     position: absolute;
     width: 1px;
     height: 0%;
+    right: 0;
+    bottom: 0;
     background-color: $secondary;
     transition: $transHeight;
   }
@@ -36,7 +38,6 @@ $rockSalt: 'Rock Salt', cursive;
   &::before {
     content: '';
     position: absolute;
-    right: 0;
     width: 1px;
     height: 0%;
     background-color: $secondary;
