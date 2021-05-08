@@ -1,5 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+// Main Colors
 $primary: #3d4051;
 $secondary: #da5032;
 $neutral: #ebeae4;
 $highlight: #bb7d4a;
 $accent: #8a8a8f;
+
+// Background Image
+$bgImage: 'https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260';
+
+// Variables
+$transWidth: width 0.3s ease-in-out;
+$transHeight: height 0.3s ease-in-out;
+
+// Fonts
+$cursive: 'Dancing Script', cursive;
+
+// Button Animations
+@mixin buttonSideAnims() {
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 0%;
+    background-color: $secondary;
+    transition: $transHeight;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 0%;
+    background-color: $secondary;
+    transition: $transHeight;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      height: 100%;
+    }
+  }
+}
+
+@mixin buttonTopBottomAnim() {
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: $secondary;
+    transition: $transWidth;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 1px;
+    background-color: $secondary;
+    transition: $transWidth;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      width: 100%;
+    }
+  }
+}

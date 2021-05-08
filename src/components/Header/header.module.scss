@@ -1,0 +1,63 @@
+@use 'styles/variables.scss' as *;
+
+.container {
+  width: 100%;
+  background: $primary;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  color: $neutral;
+  font-family: $cursive;
+  font-size: 30px;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link {
+  color: $neutral;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  position: relative;
+
+  &-text {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include buttonTopBottomAnim;
+}
+
+.btnSides {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  @include buttonSideAnims;
+}
