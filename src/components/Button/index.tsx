@@ -1,6 +1,6 @@
 import React, { FunctionComponent, createElement } from 'react'
 import clsx from 'clsx'
-import Link from 'next/Link'
+import Link from 'next/link'
 import styles from './button.module.scss'
 
 interface Props {

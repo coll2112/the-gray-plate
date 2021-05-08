@@ -1,13 +1,12 @@
 import React from 'react'
-import Button from '~/components/Button'
-import { useRouter } from 'next/router'
+import Button from 'components/Button'
 
 export default function About() {
   return (
     <div>
       <h1>About Page</h1>
       <div>
-        <Button type="secondary" href="/">
+        <Button href="/" type="secondary">
           Back to Home Page
         </Button>
       </div>

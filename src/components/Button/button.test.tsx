@@ -1,11 +1,11 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import Button from '.'
+import Button from 'components/Button'
 
 describe('Button', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <Button type="primary" href="/">
+      <Button href="/" type="primary">
         Test
       </Button>
     )

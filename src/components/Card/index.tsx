@@ -24,32 +24,35 @@ const Card: FunctionComponent<Props> = ({
   repoLink = '/',
   className,
   ...rest
-}) => {
-  return (
-    <div className={clsx(styles.card, className)} {...rest}>
-      <div className={styles.imgContainer}>
-        <a href={projectLink}>
-          <img className={styles.img} src={img} width="100%" />
-        </a>
-      </div>
-      <div className={styles.body}>
-        <h3 className={styles.title}>{title}</h3>
-        <p className={styles.text}>{text}</p>
-        <div className={styles.buttons}>
-          <Button
-            className={styles.projectLink}
-            type="secondary"
-            href={projectLink}
-          >
-            Live Site
-          </Button>
-          <Button className={styles.repoLink} type="secondary" href={repoLink}>
-            Github
-          </Button>
-        </div>
+}) => (
+  <div className={clsx(styles.card, className)} {...rest}>
+    <div className={styles.imgContainer}>
+      <a href={projectLink}>
+        <img
+          alt="ADD_ALT_TEXT"
+          className={styles.img}
+          src={img}
+          width="100%"
+        />
+      </a>
+    </div>
+    <div className={styles.body}>
+      <h3 className={styles.title}>{title}</h3>
+      <p className={styles.text}>{text}</p>
+      <div className={styles.buttons}>
+        <Button
+          className={styles.projectLink}
+          href={projectLink}
+          type="secondary"
+        >
+          Live Site
+        </Button>
+        <Button className={styles.repoLink} href={repoLink} type="secondary">
+          Github
+        </Button>
       </div>
     </div>
-  )
-}
+  </div>
+)
 
 export default Card

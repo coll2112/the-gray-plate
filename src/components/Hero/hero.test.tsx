@@ -5,7 +5,7 @@ import Hero from '.'
 describe('Hero Component', () => {
   it('should render correctly', () => {
     render(
-      <Hero title="title" subtitle="subtitle" href="/" btnText="click me" />
+      <Hero btnText="click me" href="/" subtitle="subtitle" title="title" />
     )
     expect(screen.getByText(/click me/i)).toBeInTheDocument()
   })
