@@ -1,8 +1,23 @@
 @use 'styles/variables.scss' as *;
 
+.container {
+  width: 100%;
+  font-weight: 400;
+  position: relative;
+
+  > h2 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .wordArr {
+  font-weight: 800;
   display: inline;
   text-indent: 10px;
+
+  @include textOutline($primary);
 }
 
 .wordArr span {
