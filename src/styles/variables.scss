@@ -24,7 +24,7 @@ $rockSalt: 'Rock Salt', cursive;
 
 // Button Animations
 @mixin buttonSideAnims() {
-  &::after {
+  &:before {
     content: '';
     position: absolute;
     width: 1px;
@@ -35,7 +35,7 @@ $rockSalt: 'Rock Salt', cursive;
     transition: $transHeight;
   }
 
-  &::before {
+  &:after {
     content: '';
     position: absolute;
     width: 1px;
@@ -53,7 +53,7 @@ $rockSalt: 'Rock Salt', cursive;
 }
 
 @mixin buttonTopBottomAnim() {
-  &:after {
+  &:before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -64,7 +64,7 @@ $rockSalt: 'Rock Salt', cursive;
     transition: $transWidth;
   }
 
-  &:before {
+  &:after {
     content: '';
     position: absolute;
     top: 0;
@@ -81,4 +81,10 @@ $rockSalt: 'Rock Salt', cursive;
       width: 100%;
     }
   }
+}
+
+// Text Outline
+@mixin textOutline($color) {
+  text-shadow: 1px 0px 2px $color, -1px 0px 2px $color, 0px -1px 2px $color,
+    0px 1px 2px $color;
 }

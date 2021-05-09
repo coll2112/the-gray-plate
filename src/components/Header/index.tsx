@@ -11,14 +11,13 @@ const Header: FunctionComponent = () => {
   const links = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' }
+    { name: 'Projects', href: '/projects' },
+    { name: 'Contact', href: '/contact' }
   ]
 
   useMemo(() => {
     setLinkPathName(route)
   }, [route])
-
-  console.log(linkPathName)
 
   return (
     <div className={styles.container}>
@@ -30,7 +29,6 @@ const Header: FunctionComponent = () => {
             <Link key={name} href={href}>
               <a className={clsx(styles.link, activeLink)}>
                 <span className={clsx(styles.btnSides, activeLink)} />
-                {/* TODO: Fix the buttons jumpiness */}
                 <p className={styles['link-text']}>{name}</p>
               </a>
             </Link>
