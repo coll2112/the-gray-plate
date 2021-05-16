@@ -3,10 +3,10 @@
   "parser": "@typescript-eslint/parser",
   "extends": [
     "airbnb-typescript-prettier",
+    "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript"
+    "plugin:import/warnings"
   ],
   "rules": {
     "react/prop-types": 0,
@@ -183,14 +183,28 @@
     "jest": true
   },
   "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".tsx"]
+    },
     "import/resolver": {
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"],
-        "moduleDirectory": ["node_modules", "src", "components", "~", "."]
+        "moduleDirectory": [
+          "node_modules",
+          "./src",
+          "@components",
+          "~",
+          ".",
+          "@"
+        ]
       },
       "typescript": {
         "project": "."
       }
     }
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./"
   }
 }

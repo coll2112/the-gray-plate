@@ -1,6 +1,6 @@
-import clsx from 'clsx'
 import React, { FunctionComponent } from 'react'
-import Button from 'components/Button'
+import clsx from 'clsx'
+import Button from '@components/Button'
 
 import styles from './card.module.scss'
 

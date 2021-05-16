@@ -3,11 +3,11 @@
     "baseUrl": ".",
     "paths": {
       "global": ["./src/styles/global"],
-      "components/*": ["./src/components/*"],
-      "layout/*": ["./src/layout/*"],
-      "pages/*": ["./src/pages/*"],
-      "styles/*": ["./src/styles/*"],
-      "~/*": ["./src/*"]
+      "@components/*": ["./src/components/*"],
+      "@layout/*": ["./src/layout/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@styles/*": ["./src/styles/*"],
+      "/*": ["./src/*"]
     },
     "target": "es2015",
     "moduleResolution": "node",
