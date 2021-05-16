@@ -2,10 +2,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "components/*": ["src/components/*"],
-      "layout/*": ["src/layout/*"],
-      "pages/*": ["src/pages/*"],
-      "styles/*": ["src/styles/*"],
+      "global": ["./src/styles/global"],
+      "components/*": ["./src/components/*"],
+      "layout/*": ["./src/layout/*"],
+      "pages/*": ["./src/pages/*"],
+      "styles/*": ["./src/styles/*"],
       "~/*": ["./src/*"]
     },
     "target": "es2015",
@@ -25,11 +26,13 @@
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "module": "esnext"
+    "module": "esnext",
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "include": [
     "next-env.d.ts",
     "src",
+    "**/*.modules.scss",
     "**/*.ts",
     "**/*.tsx",
     "setupTests.s",

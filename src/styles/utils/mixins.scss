@@ -1,0 +1,87 @@
+@use 'styles/utils/variables.scss' as *;
+
+// Screen Breakpoints
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: $large) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+// Button Animations
+@mixin buttonSideAnims() {
+  &:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 0%;
+    right: 0;
+    bottom: 0;
+    background-color: $secondary;
+    transition: $transHeight;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 0%;
+    background-color: $secondary;
+    transition: $transHeight;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      height: 100%;
+    }
+  }
+}
+
+// Text Outline
+@mixin textOutline($color) {
+  text-shadow: 1px 0px 2px $color, -1px 0px 2px $color, 0px -1px 2px $color,
+    0px 1px 2px $color;
+}
+
+@mixin buttonTopBottomAnim() {
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: $secondary;
+    transition: $transWidth;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 1px;
+    background-color: $secondary;
+    transition: $transWidth;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      width: 100%;
+    }
+  }
+}
