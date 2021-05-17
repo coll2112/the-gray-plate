@@ -2,12 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "global": ["./src/styles/global"],
       "@components/*": ["./src/components/*"],
       "@layout/*": ["./src/layout/*"],
       "@pages/*": ["./src/pages/*"],
       "@styles/*": ["./src/styles/*"],
-      "/*": ["./src/*"]
+      "global": ["./src/styles/global"],
+      "~/*": ["./src/*"]
     },
     "target": "es2015",
     "moduleResolution": "node",
@@ -35,7 +35,7 @@
     "**/*.modules.scss",
     "**/*.ts",
     "**/*.tsx",
-    "setupTests.s",
+    "setupTests.js",
     "jest.setup.js",
     "jest.config.js"
   ],
