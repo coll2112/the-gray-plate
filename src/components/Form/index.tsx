@@ -26,38 +26,49 @@ const Form = () => {
 
   return (
     <div className={styles.container}>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <label className={styles.label} htmlFor="name">
           Name:
-          <input
-            name="name"
-            type="text"
-            value={inputValues.name}
-            onChange={handleOnChange}
-          />
         </label>
-        <label htmlFor="email">
+        <input
+          className={styles.input}
+          name="name"
+          type="text"
+          value={inputValues.name}
+          onChange={handleOnChange}
+        />
+        <label className={styles.label} htmlFor="email">
           Email:
-          <input
-            name="email"
-            type="text"
-            value={inputValues.email}
-            onChange={handleOnChange}
-          />
         </label>
-        <label htmlFor="message">
-          What Would You Like To Say?:
-          <input
-            name="message"
-            type="textInput"
-            value={inputValues.message}
-            onChange={handleOnChange}
-          />
+        <input
+          className={styles.input}
+          name="email"
+          type="text"
+          value={inputValues.email}
+          onChange={handleOnChange}
+        />
+        <label className={styles.label} htmlFor="message">
+          Message:
         </label>
-        <button type="submit">Submit</button>
-        <button type="button" onClick={handleReset}>
-          Reset
-        </button>
+        <input
+          className={styles.input}
+          name="message"
+          type="textInput"
+          value={inputValues.message}
+          onChange={handleOnChange}
+        />
+        <div className={styles.buttons}>
+          <button className={styles.button} type="submit">
+            Submit
+          </button>
+          <button
+            className={styles.button}
+            type="button"
+            onClick={handleReset}
+          >
+            Reset
+          </button>
+        </div>
       </form>
     </div>
   )

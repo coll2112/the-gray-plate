@@ -1,1 +1,74 @@
 @use 'global' as *;
+
+.container {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  color: $primary;
+  padding: 30px;
+  margin: 0 150px;
+  border-radius: 10px;
+}
+
+.input {
+  border-radius: 3px;
+  border: 1px solid $primary;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 48%;
+  cursor: pointer;
+  padding: 10px 45px;
+  border: 1px solid $secondary;
+  background: none;
+  border-radius: 3px;
+  position: relative;
+  z-index: 2;
+  color: $primary;
+  transition: color 0.2s ease 0.1s;
+
+  // &::before {
+  //   content: '';
+  //   background: $secondary;
+  //   width: 50%;
+  //   // transition: width 0.3s ease;
+  // }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: $secondary;
+    transition: width 0.5s ease;
+    z-index: -2;
+  }
+
+  &:hover {
+    color: #fff;
+    &::before {
+      content: '';
+      width: 100%;
+    }
+  }
+}
