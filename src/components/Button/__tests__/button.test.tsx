@@ -1,14 +1,14 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import Button from '@components/Button'
 
 describe('Button', () => {
   it('should render correctly', () => {
-    const { container } = render(
+    render(
       <Button href="/" type="primary">
         Test
       </Button>
     )
-    expect(container.querySelector('.primary')).toBeInTheDocument()
+    expect(screen.getByText('Test')).toBeInTheDocument()
   })
 })
