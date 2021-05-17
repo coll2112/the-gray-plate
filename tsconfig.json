@@ -6,6 +6,7 @@
       "@layout/*": ["./src/layout/*"],
       "@pages/*": ["./src/pages/*"],
       "@styles/*": ["./src/styles/*"],
+      "@consts/*": ["./src/consts/*"],
       "global": ["./src/styles/global"],
       "~/*": ["./src/*"]
     },

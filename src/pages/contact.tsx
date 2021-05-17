@@ -1,9 +1,10 @@
 import React from 'react'
+import Form from '@components/Form'
 
 export default function About() {
   return (
     <div>
-      <h1>Contact Page</h1>
+      <Form />
     </div>
   )
 }
