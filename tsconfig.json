@@ -2,13 +2,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./src/components/*"],
-      "@layout/*": ["./src/layout/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@styles/*": ["./src/styles/*"],
-      "@consts/*": ["./src/consts/*"],
-      "global": ["./src/styles/global"],
-      "~/*": ["./src/*"]
+      "~components/*": ["./src/components/*"],
+      "~layout/*": ["./src/layout/*"],
+      "~pages/*": ["./src/pages/*"],
+      "~styles/*": ["./src/styles/*"],
+      "~consts/*": ["./src/consts/*"],
+      "~/*": ["./src/*"],
+      "global": ["./src/styles/global"]
     },
     "target": "es2015",
     "moduleResolution": "node",

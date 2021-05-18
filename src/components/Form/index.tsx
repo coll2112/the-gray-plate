@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent, useCallback, useState } from 'react'
-import { defaultFormValues } from '@consts/form'
-import FormInput from '@components/Form/FormInput'
-import Button from '@components/Button'
+import { defaultFormValues } from '~consts/form'
+import FormInput from '~components/Form/FormInput'
+import Button from '~components/Button'
 
 import styles from './form.module.scss'
 

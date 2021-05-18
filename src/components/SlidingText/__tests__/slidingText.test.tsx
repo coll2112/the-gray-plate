@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import SlidingText from '@components/SlidingText'
+import SlidingText from '~components/SlidingText'
 
 const testWords = ['test1', 'test2', 'test3']
 

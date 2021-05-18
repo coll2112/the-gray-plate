@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import clsx from 'clsx'
-import Button from '@components/Button'
+// import Button from '~components/Button'
 
 import styles from './card.module.scss'
 
@@ -21,7 +21,7 @@ const Card: FunctionComponent<Props> = ({
   title,
   text,
   projectLink = '/',
-  repoLink = '/',
+  // repoLink = '/',
   className,
   ...rest
 }) => (
@@ -40,7 +40,7 @@ const Card: FunctionComponent<Props> = ({
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.text}>{text}</p>
       <div className={styles.buttons}>
-        <Button
+        {/* <Button
           className={styles.projectLink}
           href={projectLink}
           type="secondary"
@@ -49,7 +49,7 @@ const Card: FunctionComponent<Props> = ({
         </Button>
         <Button className={styles.repoLink} href={repoLink} type="secondary">
           Github
-        </Button>
+        </Button> */}
       </div>
     </div>
   </div>
