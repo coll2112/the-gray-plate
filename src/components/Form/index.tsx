@@ -1,5 +1,6 @@
 import React, { ChangeEvent, FormEvent, useCallback, useState } from 'react'
 import { defaultFormValues } from '@consts/form'
+import FormInput from '@components/Form/FormInput'
 
 import styles from './form.module.scss'
 
@@ -27,35 +28,20 @@ const Form = () => {
   return (
     <div className={styles.container}>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <label className={styles.label} htmlFor="name">
-          Name:
-        </label>
-        <input
-          className={styles.input}
-          name="name"
-          type="text"
-          value={inputValues.name}
-          onChange={handleOnChange}
+        <FormInput
+          fieldName="name"
+          handleChange={handleOnChange}
+          values={inputValues.name}
         />
-        <label className={styles.label} htmlFor="email">
-          Email:
-        </label>
-        <input
-          className={styles.input}
-          name="email"
-          type="text"
-          value={inputValues.email}
-          onChange={handleOnChange}
+        <FormInput
+          fieldName="email"
+          handleChange={handleOnChange}
+          values={inputValues.email}
         />
-        <label className={styles.label} htmlFor="message">
-          Message:
-        </label>
-        <input
-          className={styles.input}
-          name="message"
-          type="textInput"
-          value={inputValues.message}
-          onChange={handleOnChange}
+        <FormInput
+          fieldName="message"
+          handleChange={handleOnChange}
+          values={inputValues.message}
         />
         <div className={styles.buttons}>
           <button className={styles.button} type="submit">
