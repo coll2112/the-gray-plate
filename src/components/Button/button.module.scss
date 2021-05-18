@@ -1,37 +1,34 @@
 @use 'global' as *;
 
-.primary,
-.secondary {
-  border: none;
-  min-width: 250px;
-  min-height: 45px;
-  cursor: pointer;
-  border-radius: 10px;
-  font-size: 18px;
-  color: $neutral;
-}
-
 .primary {
-  background-color: $primary;
-  transition: background-color 0.2s ease-out;
+  width: 48%;
+  cursor: pointer;
+  padding: 10px 45px;
+  border: 1px solid $secondary;
+  background: none;
+  border-radius: 3px;
+  position: relative;
+  z-index: 2;
+  color: $primary;
+  transition: color 0.05s ease 0.1s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: $secondary;
+    transition: width 0.3s ease;
+    z-index: -2;
+  }
 
   &:hover {
-    background-color: darken($primary, 5);
+    color: #fff;
+    &::before {
+      content: '';
+      width: 100%;
+    }
   }
-}
-
-.secondary {
-  color: $neutral;
-  background-color: $secondary;
-  transition: background-color 0.2s ease-out;
-
-  &:hover {
-    background-color: darken($secondary, 8);
-  }
-}
-
-.link {
-  color: $neutral;
-  font-size: 18px;
-  transition: color 0.3s ease-out, border 0.3s ease-out;
 }

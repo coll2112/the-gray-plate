@@ -1,6 +1,7 @@
 import React, { ChangeEvent, FormEvent, useCallback, useState } from 'react'
 import { defaultFormValues } from '@consts/form'
 import FormInput from '@components/Form/FormInput'
+import Button from '@components/Button'
 
 import styles from './form.module.scss'
 
@@ -15,14 +16,14 @@ const Form = () => {
     [setInputValues, inputValues]
   )
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log('Submitted')
-  }
-
   const handleReset = () => {
     setInputValues(defaultFormValues)
     console.log('Fields Cleared')
+  }
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    console.log('Submitted')
   }
 
   return (
@@ -31,29 +32,25 @@ const Form = () => {
         <FormInput
           fieldName="name"
           handleChange={handleOnChange}
-          values={inputValues.name}
+          values={inputValues}
         />
         <FormInput
           fieldName="email"
           handleChange={handleOnChange}
-          values={inputValues.email}
+          values={inputValues}
         />
         <FormInput
           fieldName="message"
           handleChange={handleOnChange}
-          values={inputValues.message}
+          values={inputValues}
         />
         <div className={styles.buttons}>
-          <button className={styles.button} type="submit">
+          <Button btnType="primary" type="submit" onClick={handleSubmit}>
             Submit
-          </button>
-          <button
-            className={styles.button}
-            type="button"
-            onClick={handleReset}
-          >
+          </Button>
+          <Button btnType="primary" type="reset" onClick={handleReset}>
             Reset
-          </button>
+          </Button>
         </div>
       </form>
     </div>

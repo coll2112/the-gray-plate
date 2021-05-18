@@ -5,35 +5,34 @@ import Link from 'next/link'
 import styles from './button.module.scss'
 
 interface Props {
-  children: string
-  href: string
-  type: 'primary' | 'secondary' | 'link'
+  btnType: 'primary' | 'secondary' | 'link'
+  href?: string
   className?: string
   [rest: string]: unknown // ...rest property
 }
 
 const Button: FunctionComponent<Props> = ({
   href,
-  type,
+  btnType,
   className,
-  children,
   ...rest
 }) => {
-  const btnType = {
+  const elementType = {
     primary: 'button',
     secondary: 'button',
     link: 'a'
   }
 
-  return (
-    <Link href={href}>
-      {createElement(
-        btnType[type],
-        { className: clsx(styles[type], className), ...rest },
-        children
-      )}
-    </Link>
-  )
+  const button = createElement(elementType[btnType], {
+    className: clsx(styles[btnType], className),
+    ...rest
+  })
+
+  if (href) {
+    return <Link href={href}>{button}</Link>
+  }
+
+  return button
 }
 
 export default Button

@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FunctionComponent } from 'react'
 
-import styles from '../form.module.scss'
+import styles from './formInput.module.scss'
 
 interface Props {
   fieldName: string
@@ -23,7 +23,7 @@ const FormInput: FunctionComponent<Props> = ({
       className={styles.input}
       name={fieldName}
       type={type}
-      value={values}
+      value={values[fieldName]}
       onChange={handleChange}
     />
   </>

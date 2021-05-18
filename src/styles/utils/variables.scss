@@ -13,9 +13,10 @@ $transWidth: width 0.2s ease-in-out;
 $transHeight: height 0.2s ease-in-out 0.2s;
 
 // Device Screen Sizes
-$tablet: 468px;
+$mobile: 480px;
+$tablet: 768px;
 $laptop: 1024;
-$desktop: 1280;
+$desktop: 1200;
 
 // Fonts
 $roboto: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
