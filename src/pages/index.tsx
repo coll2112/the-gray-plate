@@ -1,6 +1,6 @@
 import React from 'react'
-import Landing from '~components/Landing'
+import Main from '~components/Main'
 
-export default function Home() {
-  return <Landing />
-}
+const Home = () => <Main />
+
+export default Home

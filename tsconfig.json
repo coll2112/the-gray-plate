@@ -2,13 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "~components/*": ["./src/components/*"],
-      "~layout/*": ["./src/layout/*"],
-      "~pages/*": ["./src/pages/*"],
-      "~styles/*": ["./src/styles/*"],
-      "~consts/*": ["./src/consts/*"],
-      "~/*": ["./src/*"],
-      "global": ["./src/styles/global"]
+      "~components/*": ["src/components/*"],
+      "~layout/*": ["src/layout/*"],
+      "~pages/*": ["src/pages/*"],
+      "~styles/*": ["src/styles/*"],
+      "~/*": ["src/*"],
+      "global": ["src/styles/global"]
     },
     "target": "es2015",
     "moduleResolution": "node",
@@ -30,15 +29,6 @@
     "module": "esnext",
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": [
-    "next-env.d.ts",
-    "src",
-    "**/*.modules.scss",
-    "**/*.ts",
-    "**/*.tsx",
-    "setupTests.js",
-    "jest.setup.js",
-    "jest.config.js"
-  ],
+  "include": ["next-env.d.ts", "src", "**/*.ts", "**/*.tsx", "setupTests.js"],
   "exclude": ["node_modules"]
 }
